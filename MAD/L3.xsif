@@ -4,6 +4,8 @@
 ! ==============================================================================
 ! Modification History
 ! ------------------------------------------------------------------------------
+! 07-JUL-2020, G. White
+!  * re-matched LI19 quads for upgraded BC20 chicane optics
 ! 04-MAR-2019, M. Woodley
 !  * restore 19-8a accelerator section
 ! 21-FEB-2019, M. Woodley
@@ -1084,10 +1086,10 @@
   KQ19401 :=  0.833761518539
   KQ19501 := -1.022643707024 !-0.77122157 ... scavenger extraction
   KQ19601 :=  0.757743409798 ! 0.77143041 ... scavenger extraction
-  KQ19701 := -0.749406010373 !-0.7786437  ... scavenger extraction
-  KQ19801 :=  1.000000914904
-  KQ19851 := -1.749500861406 !new
-  KQ19871 :=  1.174163314925 !new
+  KQ19701 := -0.756215
+  KQ19801 := 1.07732
+  KQ19851 := -2.55624
+  KQ19871 := 2.34974
 
   Q15201 : QUAD, TYPE="1.085Q4.31", L=LQE/2, APER=rQE, K1=Qsign*(KQ15201)
   Q15301 : QUAD, TYPE="1.085Q4.31", L=LQE/2, APER=rQE, K1=Qsign*(KQ15301)
