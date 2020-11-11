@@ -137,7 +137,6 @@ M=Match;
 for ips=psno
   M.addVariable('PS',ips,'Ampl',lval(ips),uval(ips)); 
 end
-MovePhysicsVarsToPS(1:length(PS));
 M.beam=MakeBeam6DGauss(I,1e3,3,1);
 M.iInitial=i1;
 M.initStruc=I;
