@@ -265,6 +265,11 @@ for ips=1:length(qm)
   iele=findcells(BEAMLINE,'Name',qm{ips});
   fprintf('K%s := %g\n',BEAMLINE{iele(1)}.Name,BEAMLINE{iele(1)}.B/(BEAMLINE{iele(1)}.L*Cb*BEAMLINE{iele(1)}.P));
 end
+bmax=[44 44 44 44 44 20.3 44 44 44].*10;
+for ips=1:length(qm)
+  iele=findcells(BEAMLINE,'Name',qm{ips});
+  fprintf('BDES %s := %.1f (BMAX = %.1f) \n',BEAMLINE{iele(1)}.Name,10*sum(arrayfun(@(x) BEAMLINE{x}.B,iele)),bmax(ips));
+end
 if SextupoleMatch
   snames={'S1E','S2E'};
   for isext=1:length(snames)
@@ -272,4 +277,14 @@ if SextupoleMatch
     fprintf('K%s := %g\n',BEAMLINE{iele(1)}.Name,BEAMLINE{iele(1)}.B/(BEAMLINE{iele(1)}.L*Cb*BEAMLINE{iele(1)}.P));
   end
 end
-
+% Show FFS magnets in format for import into FFS_magnets.xlsx
+iv=IVB; % current lookup object
+magnames={'Q5FF' 'Q4FF' 'Q3FF' 'Q2FF' 'Q1FF' 'Q0FF' 'Q0D' 'Q1D' 'Q2D'};
+disp(magnames)
+for ips=1:length(magnames)
+  iele=findcells(BEAMLINE,'Name',magnames{ips});
+  BDES = sum(arrayfun(@(x) BEAMLINE{x}.B,iele)) ;
+  IDES=GetI(iv,BEAMLINE{iele(1)}.Type,BDES);
+  fprintf('%g %g ',BDES*10,IDES);
+end
+fprintf('\n');
