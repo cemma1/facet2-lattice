@@ -1,4 +1,4 @@
-! Beam lines generated from Lucretia: (24-Sep-2020 10:26:59)
+! Beam lines generated from Lucretia: (11-Dec-2020 09:39:14)
 
 ! ===============================================
 parameter[e_tot] = 0.006 * 1e9
@@ -171,11 +171,12 @@ XCFFS1,YCFFS1,D24E,D25E,B1RA,B1RB,ENDBC20,DFFS2,XCFFS2,YCFFS2,DFFA,BEGFF20,&
 Q5FF,Q5FF,D5FF,MQ4FF,DMQ4FF,Q4FF,Q4FF,D4FF,Q3FF,Q3FF,DMQ3FF,MQ3FF,DKRK1,KRK,&
 DKRK2,YC0FF,D3BFF,XC0FF,D3AFF,XTCAVF,MXTCAV,XTCAVF,D3FF,MQ2FF,DMQ2FF,Q2FF,Q2FF,&
 D2FF,Q1FF,Q1FF,D1FF,Q0FF,Q0FF,DMQ0FF,MQ0FF,ENDFF20,BEGEXPT20,DEX20_1,USOTR,&
-DEX20_2,IQMON20,DEX20_3,LCUBE,DEX20_4,PIC_CENT,DEX20_5,IPOTR1,DEX20_6,IPOTR2,&
-DEX20_7,IPWS1,DEX20_8,PENT,MIP,DEX20_9,PCENT,DEX20_10,IPWS2,DEX20_11,IPOTR3,&
-DEX20_12,ECUBE,DEX20_13,DWIN,DEX20_14,DSOTR1,DEX20_15,DSOTR2,DEX20_16,&
-ENDEXPT20,MQ0D,DMQ0D,Q0D,Q0D,D1D,MQ1D,DMQ1D,Q1D,Q1D,D2D,MQ2D,DMQ2D,Q2D,Q2D,D3D,&
-XC0D,D4D,YC0D,D7D,XC1D,D6D,B5DA,B5DB,D8D,PDUMP,LAIRG,MAINDUMP)
+DEX20_2,IQMON20,DEX20_3,LCUBE,DEX20_4,PIC_CENT,DEX20_5,FILG,DEX20_5A,FILS,&
+DEX20_5B,IPOTR1,DEX20_6,IPOTR2,DEX20_7,IPWS1,DEX20_8,PENT,MIP,DEX20_9,PCENT,&
+DEX20_10,IPWS2,DEX20_11,IPOTR3,DEX20_12,ECUBE,DEX20_13,DWIN,DEX20_14,DSOTR1,&
+DEX20_15,DSOTR2,DEX20_16,ENDEXPT20,MQ0D,DMQ0D,Q0D,Q0D,D1D,MQ1D,DMQ1D,Q1D,Q1D,&
+D2D,MQ2D,DMQ2D,Q2D,Q2D,D3D,XC0D,D4D,YC0D,D7D,XC1D,D6D,B5DA,B5DB,D8D,PDUMP,&
+LAIRG,MAINDUMP)
 
 ! MARK Definitions:
 
@@ -218,6 +219,8 @@ ENDL1F: marker
 ENDL2F: marker
 ENDL3F_1: marker
 ENDL3F_2: marker
+FILG: marker
+FILS: marker
 FLNGAF1: marker
 FLNGAF2: marker
 FLNGBF1: marker
@@ -416,7 +419,9 @@ DEX20_16: drift,l=0.519952
 DEX20_2: drift,l=0.123
 DEX20_3: drift,l=1.067
 DEX20_4: drift,l=0.703
-DEX20_5: drift,l=0.895
+DEX20_5: drift,l=0.4017
+DEX20_5A: drift,l=0.052
+DEX20_5B: drift,l=0.4413
 DEX20_6: drift,l=0.078
 DEX20_7: drift,l=0.088
 DEX20_8: drift,l=0.137
@@ -510,8 +515,8 @@ CQ14738: quadrupole,k1=-0.00228768472,l=0.08795,aperture=0.02667,&
 type="2.1q5.87"
 CQ14866: quadrupole,k1=-0.00228768472,l=0.08795,aperture=0.02667,&
 type="2.1q5.87"
-Q0D: quadrupole,k1=-0.296673,l=0.5,aperture=0.025,type="2.13q38.31"
-Q0FF: quadrupole,k1=0.505657,l=0.3571,aperture=0.0186,type="1.625q27.3"
+Q0D: quadrupole,k1=-0.297527777,l=0.5,aperture=0.025,type="2.13q38.31"
+Q0FF: quadrupole,k1=0.505658436,l=0.3571,aperture=0.0186,type="1.625q27.3"
 Q11201: quadrupole,k1=1.77265557,l=0.0534,aperture=0.0137795,type="1.085q4.31"
 Q11301: quadrupole,k1=-3.16493255,l=0.0534,aperture=0.0137795,&
 type="1.085q4.31"
@@ -640,22 +645,22 @@ Q19701: quadrupole,k1=-0.756215,l=0.0534,aperture=0.0137795,type="1.085q4.31"
 Q19801: quadrupole,k1=1.07732,l=0.0534,aperture=0.0137795,type="1.085q4.31"
 Q19851: quadrupole,k1=-2.55624,l=0.0534,aperture=0.0137795,type="1.085q4.31"
 Q19871: quadrupole,k1=2.34974,l=0.0534,aperture=0.0137795,type="1.085q4.31"
-Q1D: quadrupole,k1=0.480667,l=0.5,aperture=0.025,type="2.13q38.31"
+Q1D: quadrupole,k1=0.480614692,l=0.5,aperture=0.025,type="2.13q38.31"
 Q1EL: quadrupole,k1=0.733338172,l=0.357119,aperture=0.0186,type="1.625q27.3"
 Q1ER: quadrupole,k1=0.733338172,l=0.357119,aperture=0.0186,type="1.625q27.3"
-Q1FF: quadrupole,k1=-0.911145,l=0.3571,aperture=0.0186,type="1.625q27.3"
-Q2D: quadrupole,k1=-0.296673,l=0.5,aperture=0.025,type="2.13q38.31"
+Q1FF: quadrupole,k1=-0.911146885,l=0.3571,aperture=0.0186,type="1.625q27.3"
+Q2D: quadrupole,k1=-0.297527777,l=0.5,aperture=0.025,type="2.13q38.31"
 Q2EL: quadrupole,k1=-0.485791526,l=0.357119,aperture=0.0186,type="1.625q27.3"
 Q2ER: quadrupole,k1=-0.485791526,l=0.357119,aperture=0.0186,type="1.625q27.3"
-Q2FF: quadrupole,k1=0.505657,l=0.3571,aperture=0.0186,type="1.625q27.3"
+Q2FF: quadrupole,k1=0.505658436,l=0.3571,aperture=0.0186,type="1.625q27.3"
 Q3EL: quadrupole,k1=0.284195658,l=0.5,aperture=0.025,type="2.13q38.31"
 Q3ER: quadrupole,k1=0.284195658,l=0.5,aperture=0.025,type="2.13q38.31"
-Q3FF: quadrupole,k1=0.885617,l=0.3571,aperture=0.0186,type="1.625q27.3"
+Q3FF: quadrupole,k1=0.885671559,l=0.3571,aperture=0.0186,type="1.625q27.3"
 Q4EL: quadrupole,k1=0.396954927,l=0.357119,aperture=0.0186,type="1.625q27.3"
 Q4ER: quadrupole,k1=0.396954927,l=0.357119,aperture=0.0186,type="1.625q27.3"
-Q4FF: quadrupole,k1=-1.55235,l=0.3571,aperture=0.0186,type="1.625q27.3"
+Q4FF: quadrupole,k1=-1.55257781,l=0.3571,aperture=0.0186,type="1.625q27.3"
 Q5E: quadrupole,k1=-0.968974669,l=0.357119,aperture=0.0186,type="1.625q27.3"
-Q5FF: quadrupole,k1=-1.0887,l=0.2304,aperture=0.0083,type="0.813q17.7"
+Q5FF: quadrupole,k1=-1.08854115,l=0.2304,aperture=0.0083,type="0.813q17.7"
 QA10361: quadrupole,k1=-10.3565,l=0.054,aperture=0.016,type="1.26q3.5"
 QA10371: quadrupole,k1=12.2142,l=0.054,aperture=0.016,type="1.26q3.5"
 QA11132: quadrupole,k1=-3.03182075,l=0.0534,aperture=0.0137795,&
